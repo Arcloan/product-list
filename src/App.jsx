@@ -1,7 +1,9 @@
-import { ItemCard } from "./components/ItemCard"
+import { Container } from "./components/Container";
 
 function App() {
-  return <ItemCard imgUrl={"./assets/images/image-tiramisu-desktop.jpg"} name="tiramisu" category="titletry" price="5.50"></ItemCard>
+  return (
+    <Container></Container>
+  )
 }
 
 export default App
