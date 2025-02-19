@@ -1,6 +1,6 @@
 import { Container } from "./components/Container";
 
-function App() {
+function App() {  
   return (
     <Container></Container>
   )
