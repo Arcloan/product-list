@@ -11,7 +11,7 @@ export function ConfirmationDialog() {
     
     return (
         <dialog ref={dialogRef} className="m-auto inset-0 md:w-[60ch] md:max-h-[75%] gap-4 open:grid rounded-2xl bg-white p-4 backdrop:bg-black/40 max-md:w-screen">
-            <img src="/assets/images/icon-order-confirmed.svg" alt="" />
+            <img src={import.meta.env.BASE_URL + "/assets/images/icon-order-confirmed.svg"} alt="" />
             <h2 className="font-bold text-3xl">Order <br className="md:hidden"/> Confirmed</h2>
             <p className="text-(--color-rose500) text-sm">We hope you enjoy your food!</p>
             <div className="p-4 bg-(--color-rose100) rounded">
