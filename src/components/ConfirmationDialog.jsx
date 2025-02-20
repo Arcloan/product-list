@@ -10,7 +10,7 @@ export function ConfirmationDialog() {
     const filteredDesserts = Object.values(currentDesserts).filter((dessert) => dessert.quantity > 0);
     
     return (
-        <dialog ref={dialogRef} className="md:m-auto inset-0 md:w-[60ch] md:max-h-[75%] gap-4 open:grid rounded-2xl bg-white p-4 backdrop:bg-black/40 max-md:w-screen">
+        <dialog ref={dialogRef} className="m-auto inset-0 md:w-[60ch] md:max-h-[75%] gap-4 open:grid rounded-2xl bg-white p-4 backdrop:bg-black/40 max-md:w-screen">
             <img src="/assets/images/icon-order-confirmed.svg" alt="" />
             <h2 className="font-bold text-3xl">Order <br className="md:hidden"/> Confirmed</h2>
             <p className="text-(--color-rose500) text-sm">We hope you enjoy your food!</p>
@@ -19,7 +19,7 @@ export function ConfirmationDialog() {
                 return (
                     <div key={idx} className="flex justify-between items-center not-last:border-b-2 border-(--color-rose100) pb-4">
                         <div className="dessertType flex gap-4 items-center">
-                            <img src={currentDesserts[Object.keys(currentDesserts).filter((curr) => dessert.name === currentDesserts[curr].name)[0]].imageUrl} alt="" className="rounded size-12" />
+                            <img src={import.meta.env.BASE_URL + currentDesserts[Object.keys(currentDesserts).filter((curr) => dessert.name === currentDesserts[curr].name)[0]].imageUrl} alt="" className="rounded size-12" />
                             <div>
                                 <h3 className="font-bold text-nowrap text-ellipsis overflow-hidden max-md:max-w-[20ch]">{dessert.name}</h3>
                                 <p className="flex gap-4"><span className="text-(--color-red)">{dessert.quantity}x</span><span className="text-(--color-rose400)">@{dessert.price.toFixed(2)}</span></p>

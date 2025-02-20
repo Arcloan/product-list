@@ -11,9 +11,9 @@ export function ItemCard({ imgUrls, name, category, price}) {
         <div className="grid gap-2">
             <div className="relative mb-4">
                 <picture>
-                    <source srcSet={imgUrls.desktop.slice(1)} media="(min-width : 64rem)"/>
-                    <source srcSet={imgUrls.tablet.slice(1)} media="(min-width : 48rem)" />
-                    <img src={imgUrls.mobile.slice(1)} alt="" className={`rounded object-cover border-4` + selected}/>
+                    <source srcSet={import.meta.env.BASE_URL + imgUrls.desktop.slice(1)} media="(min-width : 64rem)"/>
+                    <source srcSet={import.meta.env.BASE_URL + imgUrls.tablet.slice(1)} media="(min-width : 48rem)" />
+                    <img src={import.meta.env.BASE_URL + imgUrls.mobile.slice(1)} alt="" className={`rounded object-cover border-4` + selected}/>
                 </picture>
                 <AddButton totalCount={selectedCount} name={category}></AddButton>
             </div>
